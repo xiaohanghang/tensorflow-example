@@ -54,3 +54,10 @@ for x_val in x_vals:
  [ 78.]
  [ 70.]]
 '''
+
+
+first_var = tf.Variable(tf.zeros([2,3]))
+print(sess.run(first_var.initializer))
+second_var = tf.Variable(tf.zeros_like(first_var))
+# Depends on first_var
+print(sess.run(second_var.initializer))

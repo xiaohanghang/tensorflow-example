@@ -28,6 +28,11 @@ my_strides = [1, 2, 2, 1]
 mov_avg_layer= tf.nn.conv2d(x_data, my_filter, my_strides,
 padding='SAME''', name='Moving_Avg_Window')
 
+'''
+Note:to figure out the ouput size of convolutional layer ,we can use the following formula:output:(W-F+2P)/S + 1,where W is thre input size,F is the filter size,
+P is the padding of zeros, and S is the stride...
+
+'''
 r"""Computes a 2-D convolution given 4-D `input` and `filter` tensors.
 
 Given an input tensor of shape `[batch, in_height, in_width, in_channels]`
